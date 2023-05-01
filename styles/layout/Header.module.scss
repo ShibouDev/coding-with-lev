@@ -1,7 +1,400 @@
-@use "../_variables"
+@import "../_variables.scss";
 
-&_wrapper{
-    width: 100vw;
-    height: 100vh;
-    back
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  left: 0px;
+  top: 1px;
+  display: flex;
+  background-color: #1C1B21 ;
+  justify-content: center;
+  &_container {
+    max-width: 1370px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    &_backMain {
+      object-fit: cover;
+      z-index: 0;
+    }
+    &_nav {
+      display: flex;
+      position: relative;
+      color: $text-color-primary;
+      z-index: 1;
+      margin-top: 40px;
+      align-items: center;
+      flex-direction: column;
+      &_logoWrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &_logo {
+          margin-right: 20px;
+        }
+        &_logoName {
+        }
+      }
+      &_liEl {
+        display: flex;
+        li {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        li:not(:last-child) {
+          margin-right: 55px;
+        }
+      }
+    }
+    &_textContainer{
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      align-items: left;
+      width: 100%;
+      &_NewSingle {
+        position: relative;
+        font-size: 48px;
+        font-weight: 700;
+        color: $text-color-primary;
+        font-family: $font-Poppins;
+        font-style: normal;
+        font-display: swap;
+        // margin-left: -70px;
+      }
+      &_WFL {
+        font-family: $font-Poppins;
+        font-weight: 700;
+        font-size: 100px;
+        color: transparent;
+        position: relative;
+        // margin-left: -70px;
+        -webkit-text-stroke: 1px $text-color-primary;
+      }
+    }
+    &_audioPlayer{
+      margin-top: 120px;
+    }
+  }
+  &_block_post_all {
+    position: relative;
+    display: flex;
+    height: 300px;
+    width: 100%;
+    // margin-top: 226px;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%,0 );
+    &_blockPost{
+      // margin-right: 30px;
+      // left: 10px;
+      width: 350px;
+      height: 300px;
+      position: relative;
+      display: inline-block;
+      // margin-top: 220px;
+      &_blockPostIMG {
+        position: relative;
+        display: flex;
+        // margin-top: 220px;
+        &_blockBlueText {
+          position: absolute;
+          // display: flex;
+          bottom: 0;
+          width: 350px;
+          height: 90px;
+          // opacity: 0.7;
+          border-radius: 20px 0px;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba($color: $secondary-color, $alpha: 0.7);
+          &_blockText {
+            padding: 21px 20px 21px 20px;
+            position: absolute;
+            color: $text-color-primary;
+            font-size: 16px;
+            font-family: $font-Poppins;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  &_blockDiscrStyle{
+    margin-top: 180px;
+    height: 600px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    // background-color: rgb(38, 147, 147);
+    display: flex;
+    &_blockTextUs{
+      height: 600px;
+      width: 540px;
+      // position: absolute;
+      display: flex;
+      // background-color: rgb(225, 225, 24);
+      &_BrLi{
+        font-size: 48px;
+        font-weight: 700;
+        color: $text-color-primary;
+        font-family: $font-Poppins;
+        margin-left: 31px;
+        top: 0px;
+        // position: relative;
+      }
+      &_imgBuss{
+        margin-top: 21px;
+      }
+      &_blockDisText{
+        margin-top: 120px;
+        // display: flex;
+        position: absolute;
+        width: 540px;
+        height: 320px;
+        // background-color: aquamarine;
+        color: $text-color-primary;
+        left: 0px;
+        &_styleText{
+          font-size: 16px;
+          font-style: 400;
+          font-family: $font-Poppins;
+        }
+      }
+      &_blockForpersonDis{
+        // position: relative;
+        height: 30px;
+        width: 250px;
+        margin-right: 20px;
+        margin-top: 33px;
+        display: inline-block;
+        // background-color: rgba(169, 108, 32, 0.922);
+        &_blockImgDis{
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          }
+        &_blocktextAuthor{
+          position: absolute;
+          margin-left: 50px;
+          display: flex;
+          font-size: 18px;
+          font-family: $font-Poppins;
+          font-weight: 600;
+          color: $text-color-primary;
+        }
+      }
+    }
+    &_blockIMGtwoPhoto{
+      width: 445px;
+      height: 466px;
+      // background-color: rebeccapurple;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translate(0, -50%);
+      &_about1{
+        position: absolute;
+        z-index: 1;
+      }
+      &_about2{
+        margin-top: 66px;
+        margin-left: 95px;
+        position: absolute;
+      }
+    }
+  }
+  &_blockLastTrack{
+    // height: 944px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: bisque;
+    &_blockCircle{
+      width: 510px;
+      height: 510px;
+      // background-color: aquamarine;
+      &_fCircle{
+        width: 510px;
+        height: 510px;
+        border-radius: 50%;
+        background-color: $secondary-color-circle-first;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &_sCircle{
+          width: 472px;
+          height: 472px;
+          border-radius: 50%;
+          // text-align: center;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          background-color: $secondary-color-circle-second;
+          // &_imgInCircle{
+            
+          // }
+        }
+        
+      }
+    }
+    &_blockTrackMus{
+      width: 600px;
+      height: 600px;
+      // background-color: rebeccapurple;
+      &_blockInTrackMus{
+        width: 540px;
+        height: 600px;
+        margin-left: 60px;
+        // background-color: bisque;
+        &_blockTitleTrack{
+          // margin-left: 60px;
+          width: 100%;
+          height: 80px;
+          // background-color: aqua;
+          display: flex;
+          align-items: center;
+          &_titleLastTrack{
+            margin-left: 30px;
+            font-size: 48px;
+            font-family: $font-Poppins;
+            font-weight: 700;
+            color: $text-color-primary;
+          }
+        }
+        &_blockMusPlaer{
+          margin-top: 62px;
+          width: 100%;
+          height: 80px;
+          background-color: bisque;
+        }
+        &_MusicForPlayer{
+          margin-top: 50px;
+          width: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // float: left;
+          // background-color: rgb(15, 18, 17);
+          &_trackMus{
+            // float: left;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            p {
+              font-size: 14px;
+              font-family: $font-Poppins;
+              font-weight: 700;
+              color: $text-color-primary;
+              opacity: 0.5;
+            }
+            h3 {
+              margin-left: 20px;
+              font-size: 18px;
+              font-family: $font-Poppins;
+              font-weight: 600;
+              color: $text-color-primary;
+            }
+          }
+        }
+        &_footerMus{
+          margin-top: 50px;
+          width: 100%;
+          height: 36px;
+          display: flex;
+          // background-color: red;
+          &_title{
+              // display: flex;
+              font-size: 24px;
+              font-family: $font-Poppins;
+              font-weight: 600;
+              color: $text-color-primary;
+          }
+          &_blockIcon{
+            margin-left: 30px; 
+            width: 100px;
+            height: 100%;
+            // background-color: black;
+            display: flex;
+            align-items: center;
+            &_text{
+              margin-left: 10px;
+              display: flex;
+              font-size: 14px;
+              font-family: $font-Poppins;
+              font-weight: 600;
+              color: $text-color-primary;
+            }
+            &_img{
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_blockArticleMTV{
+    width: 1338px;
+    height: 783px;
+    // background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    &_blockMainArticle{
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 100%;
+      height: 483px;
+      // background-color: rgb(0, 237, 158);
+      &_imgArticle{
+        position: absolute;
+        right: 80px;
+        // margin-right: 80px;
+        z-index: 1;
+      }
+      &_borderFoText{
+        position: absolute;
+        border: 1px solid $text-color-primary;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 100%;
+        height: 313px;
+        // background-color: red;
+        border-radius: 30px 0px;
+        &_blockText{
+          margin-left: 80px;
+          margin-top: 50px;
+          position: absolute;
+          width: 520px;
+          height: 213px;
+          // background-color: bisque;
+          h2{
+            font-size: 18px;
+            font-family: $font-Poppins;
+            font-weight: 700;
+            color: $secondary-color;
+            position: absolute;
+            bottom: 0px;
+          }
+          &_text{
+            width: 100%;
+            height: 161px;
+            // background-color: rgb(13, 12, 14);
+            border-bottom: 1px solid $text-color-primary;
+            h1{
+              font-size: 18px;
+              font-family: $font-Poppins;
+              font-weight: 400;
+              color: $text-color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
 }
